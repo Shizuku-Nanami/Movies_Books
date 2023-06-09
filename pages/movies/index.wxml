@@ -1,0 +1,18 @@
+<wxs module="filters" src="../../utils/float.wxs"></wxs>
+<view class="movies-container">
+  <view class="movie-row" wx:for="{{movies}}" wx:key="index">
+    <view class="movie-item" bindtap="viewMovieDetail" data-id="{{item.id}}">
+      <image class="movie-image" src="{{item.img_url}}" mode="aspectFill"></image>
+      <text class="movie-name">{{item.name}}</text>
+      <view>
+      <wux-rater controlled fontSize="{{ 18 }}" show-value min="0" max="5" value="{{filters.toFix1(item.score/2)}}" />
+        <text class="movie-score">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<wux-divider class="but-info" text="内容加载完成" />
+<wux-footer
+      theme="positive"
+      content="Hikarisame Technology Studio All rights reserved"
+    />

@@ -1,0 +1,32 @@
+.card {
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(247, 245, 228);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-content {
+  flex: 1;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.username {
+  font-size: 28rpx;
+  font-weight: normal ;
+  margin-bottom: 5px;
+}
+.time {
+  font-size: 25rpx;
+  font-weight: normal ;
+  margin-bottom: 5px;
+  margin-left:10px ;
+  color: #555;
+}
+
+.comment {
+  font-size: 27rpx;
+}

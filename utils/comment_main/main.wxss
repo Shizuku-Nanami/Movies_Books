@@ -1,0 +1,48 @@
+
+
+.movies-container , .books-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movie-row , .books-row {
+  width: 32%; 
+  margin-bottom: 5rpx;
+  margin-top: 5rpx;
+}
+
+.movie-item , .books-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-image , .books-image {
+  width: 180rpx;
+  height: 230rpx;
+  border-radius: 10rpx; 
+}
+
+.movie-name , .books-name {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  text-align: left;
+}
+
+.movie-score , .books-score {
+  font-size: 25rpx;
+  color: #999999;
+  align-items: center;
+  margin-top: 5rpx;
+}
+
+.but-info {
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

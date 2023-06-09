@@ -1,0 +1,8 @@
+var filters = {
+  toFix1: function (value) {
+    return parseFloat(value).toFixed(1)
+  }
+}
+module.exports = {
+  toFix1: filters.toFix1
+}

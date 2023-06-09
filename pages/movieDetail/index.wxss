@@ -1,0 +1,37 @@
+@import "/utils/comment_card/card.wxss";
+@import "/utils/comment_brief/info.wxss";
+
+.actors-scroll {
+  white-space: wrap;
+}
+
+.actors-container {
+  display: flex;
+}
+
+.actor-item {
+  margin-right: 10rpx;
+  margin-left: 10rpx;
+}
+
+.actor-avatar {
+  width: 180rpx;
+  height: 250rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.actor-name {
+  font-size: 25rpx;
+  align-items: left;
+  font-weight: bold;
+}
+
+.actor-name-dir {
+  font-size: 25rpx;
+  align-items: left;
+  font-weight: normal;
+}
+
+

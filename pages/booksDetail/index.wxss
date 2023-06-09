@@ -1,0 +1,3 @@
+@import "/utils/comment_card/card.wxss";
+@import "/utils/comment_brief/info.wxss";
+

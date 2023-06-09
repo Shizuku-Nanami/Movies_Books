@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/movies/index",
+    "pages/movieDetail/index",
+    "pages/books/index",
+    "pages/booksDetail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/movies/index",
+      "text": "电影",
+      "iconPath": "/images/tabs/movies.png",
+      "selectedIconPath": "/images/tabs/movies_in.png"
+    },{
+      "pagePath": "pages/books/index",
+      "text": "图书",
+      "iconPath": "/images/tabs/books.png",
+      "selectedIconPath": "/images/tabs/books_in.png"
+    }]
+  },
+  "usingComponents": {
+    "wux-cell-group": "/packages/lib/cell-group/index",
+    "wux-cell": "/packages/lib/cell/index",
+    "wux-rater": "/packages/lib/rater/index",
+    "wux-refresher": "/packages/lib/refresher/index",
+    "wux-divider": "/packages/lib/divider/index",
+    "wux-footer": "/packages/lib/footer/index"
+  }
+}

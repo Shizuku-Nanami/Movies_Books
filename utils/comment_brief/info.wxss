@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 20px 10px 20px;
+}
+
+.container-info {
+  width:55%;
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.container-au{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 20rpx;
+}
+
+
+.description-info , .introduce-info{
+  font-size: 28rpx;
+  margin-left:30rpx ;
+  margin-right: 30rpx;
+  margin-top: 10rpx ;
+  margin-bottom: 20rpx;
+}
+
+.movie-image ,.book-image {
+  width: 265rpx;
+  height: 365rpx;
+  border-radius: 10px;
+}
+
+.movie-info ,.book-info {
+  margin-left: 20px;
+}
+
+.movie-name ,.book-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.movie-description .book-description {
+  margin-top: 20px;
+}
+
+.movie-categories ,.book-categories{
+  font-size: 25rpx;
+  color: #707070;
+}
+
+.but-info {
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

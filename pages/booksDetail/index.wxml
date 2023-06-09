@@ -1,0 +1,39 @@
+<wxs module="filters" src="../../utils/float.wxs"></wxs>
+<!-- 图书头部（图片/介绍等） -->
+<view class="container">
+  <image class="book-image" src="{{book.img_url}}" mode="aspectFill"></image>
+  <view class="container-info">
+    <text class="book-name">{{book.name}}</text>
+    <view class="book-categories">
+      <text wx:for="{{book.author}}" wx:for-item="author" wx:key="index">{{author}} </text>
+      <text> / {{book.publisher}} / </text>
+      <text>出版时间：{{book.year}}</text>
+    </view>
+    <view>
+      <wux-rater controlled fontSize="{{ 18 }}" show-value min="0" max="5" value="{{filters.toFix1(book.score/2)}}" />
+      <text class="movie-score" style="font-size:13px">{{book.score}}</text>
+    </view>
+  </view>
+</view>
+<!-- 图书简介 -->
+<text style="padding-left: 30rpx;font-size: 35rpx;font-weight: bold;">简介</text>
+<view class="introduce-info">
+  <text>{{book.introduce}}</text>
+</view>
+<!-- 图书评论 -->
+<view class="card">
+  <text style="font-size: 40rpx;font-weight: bold;">评论</text>
+  <view wx:for="{{book.short_comments}}" wx:key="index">
+    <view class="comment-content">
+      <text class="username">{{item.user}}</text>
+      <text class="time">{{item.time}}</text>
+    </view>
+    <text class="comment">{{item.content}}</text>
+    <wux-divider show-text="{{ false }}" />
+  </view>
+</view>
+<wux-divider class="but-info" text="内容加载完成" />
+<wux-footer
+      theme="positive"
+      content="Hikarisame Technology Studio All rights reserved"
+    />

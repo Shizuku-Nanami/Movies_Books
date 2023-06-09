@@ -1,0 +1,57 @@
+<wxs module="filters" src="../../utils/float.wxs"></wxs>
+<!-- 影视介绍顶部（图片/评分/部分介绍） -->
+<view class="container">
+  <image class="movie-image" src="{{movie.img_url}}" mode="aspectFill"></image>
+  <view class="container-info">
+    <text class="movie-name">{{movie.name}}</text>
+    <view class="movie-categories">
+      <text wx:for="{{movie.category}}" wx:for-item="category" wx:key="index">{{category}} </text>
+      <text> / {{movie.area}} / </text>
+      <text>片长{{movie.duration}}分钟 / {{movie.year}}</text>
+    </view>
+    <view>
+      <wux-rater controlled fontSize="{{ 18 }}" show-value min="0" max="5" value="{{filters.toFix1(movie.score/2)}}" />
+      <text class="movie-score" style="font-size:13px">{{movie.score}}</text>
+    </view>
+  </view>
+</view>
+<!-- 影视简介 -->
+<text style="padding-left: 30rpx;font-size: 35rpx;font-weight: bold;">简介</text>
+<view class="description-info">
+  <text>{{movie.description}}</text>
+</view>
+<!-- 影视人员 -->
+<text style="padding-left: 30rpx;font-size: 35rpx;font-weight: bold;margin-top: 20rpx;">影视人员</text>
+<view class="container-au">
+  <scroll-view class="actors-scroll" scroll-x="{{true}}">
+    <view class="actors-container">
+      <view wx:key="index" class="actor-item">
+        <image class="actor-avatar" src="{{movie.director.picture_url}}"></image>
+        <text class="actor-name">{{movie.director.name}}\n</text>
+        <text class="actor-name-dir">导演</text>
+      </view>
+      <view wx:for="{{movie.actors}}" wx:key="index" class="actor-item">
+        <image class="actor-avatar" src="{{item.picture_url}}"></image>
+        <text class="actor-name">{{item.name}}\n</text>
+        <text class="actor-name-dir">演员</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- 评论 -->
+<view class="card">
+  <text style="font-size: 40rpx;font-weight: bold;">评论</text>
+  <view wx:for="{{movie.short_comments}}" wx:key="index">
+    <view class="comment-content">
+      <text class="username">{{item.user}}</text>
+      <text class="time">{{item.time}}</text>
+    </view>
+    <text class="comment">{{item.content}}</text>
+    <wux-divider show-text="{{ false }}" />
+  </view>
+</view>
+<wux-divider class="but-info" text="内容加载完成" />
+<wux-footer
+      theme="positive"
+      content="Hikarisame Technology Studio All rights reserved"
+    />
